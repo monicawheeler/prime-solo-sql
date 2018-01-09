@@ -37,6 +37,6 @@ VALUES ('jose', 'minneapolis', '1000', '10', '10000');
 
 -- 9. The bank is losing money in Miami and Phoenix and needs to unload low transaction customers: Delete users that reside in miami OR phoenix and have completed fewer than 5 transactions.
 DELETE FROM accounts
-WHERE city = 'phoenix' OR city = 'miami' AND transactions_completed < 5;
+WHERE (city = 'phoenix' OR city = 'miami') AND transactions_completed < 5;
 
 
